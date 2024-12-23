@@ -1,0 +1,21 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date: "Actualmente...",
+        title: "Sin experiencia laboral",
+        description: "Tal vez no tenga experiencia laboral, pero lo compenso con determinación, esfuerzo y muchas ganas de aprender."
+    },
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+  {EXPERIENCE.map(exp=>
+  (
+    <li class='mb-10 ms-4'>
+      <ExperienceItem {...exp}/>
+    </li>
+  ))}
+</ol>
+

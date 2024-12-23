@@ -1,11 +1,76 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Badge from '../components/Badge.astro';
 import Layout from '../layouts/Layout.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import LinkedinIcon from '../icons/Linkedin.astro';
+import SocialBtn from '../components/SocialBtn.astro';
+import GitHubIcon from '../icons/GitHub.astro';
+import EmailIcon from "../icons/Email.astro"
+import ExperienceIcon from '../icons/ExperienceIcon.astro';
+import CodeIcon from '../icons/CodeIcon.astro'
+import ExperienceTimeLine from '../components/ExperienceTimeLine.astro';
+import Projects from '../components/Projects.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout 
+  title="Portafolio de Hemerson Ballen. Desarrollador y Programador Web"
+  description='Contrata a Hemerson Ballen, Desarrollador Web y Programador Web en Bogotá, Colombia'
+>
+  <main class='px-8'>
+    <SectionContainer class='py-44 pb-20' >
+      <img 
+        class='rounded-full h-12 w-11 mb-4'
+        src='/profile_photo.jpeg'
+        alt='Hemerson Ballen'
+      />
+      <h1 class='text-white text-3xl md:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10'>
+        Hola, soy Hemerson Ballen. <a 
+        href='https://www.linkedin.com/in/hemerson-ballen'
+        target='_blank'
+        class='flex justify-center items-center'
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class=' text-[18px] lg:text-[22px] opacity-80 text-wrap max-w-[600px]'>
+        <span class='text-yellow-300/100'>Soy un Desarrollador Apasionado por el Conocimiento y el Aprendizaje.</span> 
+        Amo la <span class='text-green-400/90'>programación</span> 👨‍💻, los <span class='text-blue-500/90'>libros</span>📚 y los <span class='text-violet-400/90'>videojuegos</span> 🎮. Vivo en Bogotá, Colombia. Me Especializo en la Creacion de Aplicaciones Coherentes, Robustas e Interactivas.
+      </h2>
+
+      <ul class='flex gap-4 mt-8 flex-wrap pb-10'>
+        <SocialBtn href="https://www.linkedin.com/in/hemerson-ballen" >
+          <LinkedinIcon class=' size-4 lg:size-6'/>
+          Linkedin
+        </SocialBtn>
+        <SocialBtn href='https://github.com/HJBallen'>
+          <GitHubIcon  class=' size-4 lg:size-6'/>
+          Github
+        </SocialBtn>
+        <SocialBtn href='mailto:hjballent@gmail.com'>
+          <EmailIcon class=' size-4 lg:size-6'/>
+          hjballent@gmail.com
+        </SocialBtn>
+      </ul>
+    </SectionContainer>
+
+    <SectionContainer id='experiencia'>
+      
+      <h2 class=' text-2xl font-semibold mb-5 flex gap-x-3 items-center'>
+        <ExperienceIcon class='size-7'/>Experiencia laboral
+      </h2>
+      <ExperienceTimeLine/>
+    </SectionContainer>
+
+    <SectionContainer id='proyectos' class=''>
+      <h2 class='text-2xl font-semibold mb-5 flex gap-x-3 items-center pt-20'>
+        <CodeIcon/>
+        Proyectos
+      </h2>
+      <Projects/>
+    </SectionContainer>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </main>
 </Layout>
