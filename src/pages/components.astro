@@ -1,0 +1,25 @@
+---
+import Badge from "@/components/Badge.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import SocialBtn from "@/components/SocialBtn.astro";
+import Layout from "@/layouts/Layout.astro";
+
+---
+<Layout title='Design System' description="Componentes usados en el portfolio">
+  <SectionContainer class="py-44 pb-32 flex flex-col gap-y-10">
+    <article class='mb-10'>
+      <h1 class='mb-4 text-xl font-bold'>&lt; Badge /&gt</h1>
+      <Badge>green bandage</Badge>
+    </article>
+    <article class='mb-10'>
+        <h1 class='mb-4 text-xl font-bold'>&lt; SocialBtn /&gt</h1>
+      <div class='flex'>
+      <SocialBtn>
+        Alguna monda
+      </SocialBtn>
+      </div>
+    </article>
+  </SectionContainer>
+  
+</Layout>
+  
